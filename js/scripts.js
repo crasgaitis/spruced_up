@@ -8,7 +8,6 @@
 // 
 const list = [{title:"Acer", id: 0, weight: 0.9, count: 36978}, {title:"Prunus", id: 1, weight: 0.83, count: 28668}, {title:"Malus", id: 2, weight: 0.29, count: 8718}, {title:"Crataegus", id: 3, weight: 0.25, count: 7083}, {title:"Quercus",id: 4, weight: 0.24, count: 7061}, {title:"Cornus",id: 5, weight: 0.22, count: 6222}, {title:"Pyrus",id: 6, weight: 0.19, count: 5517}];
 document.getElementById("button").onclick = function() {onclick()};
-
 weight = function(arr) {
     return [].concat(...arr.map((obj) => Array(Math.ceil(obj.weight * 100)).fill(obj))); 
 }
@@ -18,8 +17,22 @@ pick = function(arr) {
 }
 
 function onclick() {
-    
     document.getElementById("demo").innerHTML = pick(list).title;
+}
+
+function move() {
+    var elem = document.getElementById("myBar");   
+    var width = 20;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+        elem.innerHTML = width * 1  + '%';
+      }
+    }
   }
 
 window.addEventListener('DOMContentLoaded', event => {

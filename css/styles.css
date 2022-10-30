@@ -341,6 +341,35 @@ label {
   color: white;
 }
 
+.progress {
+	background-color: #d8d8d8;
+  overflow: hidden;
+	border-radius: 40px;
+	position: relative;
+	margin: 15px 0;
+  margin-left: 31%;
+	height: 30px;
+	width: 300px;
+}
+
+.progress-done {
+	background: linear-gradient(to left, #F2709C, #FF9472);
+	box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
+	border-radius: 20px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 97%;
+	animation: progress 4s normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes progress {
+  0% {width: 50%}
+  100% {width: 100%}
+}
 button {
   border-radius: 0;
 }
@@ -5156,7 +5185,7 @@ textarea.form-control-lg {
   overflow: hidden;
   font-size: 0.75rem;
   background-color: #e9ecef;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
 }
 
 .progress-bar {
@@ -7558,7 +7587,7 @@ textarea.form-control-lg {
 }
 
 .mb-5 {
-  margin-bottom: 3rem !important;
+  margin-bottom: 1rem !important;
 }
 
 .mb-auto {
