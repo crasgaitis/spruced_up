@@ -337,6 +337,10 @@ label {
   display: inline-block;
 }
 
+#demo{
+  color: white;
+}
+
 button {
   border-radius: 0;
 }
